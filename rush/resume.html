@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Sorrawit Junsawang</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -27,14 +27,14 @@
             font-family: 'Sarabun', 'Roboto', sans-serif;
             color: #333;
             line-height: 1.6;
-            padding-top: 80px; /* เว้นที่ให้ Navbar (ปรับค่าตามความสูงจริงของ Nav ใน Home.css) */
+            padding-top: 80px;
+            /* เว้นที่ให้ Navbar (ปรับค่าตามความสูงจริงของ Nav ใน Home.css) */
             background-color: #f6f6f6;
         }
 
         /* --- Layout เฉพาะเนื้อหา Resume --- */
         section {
             padding: 40px 20px;
-            width: 900px;
             margin: auto;
         }
 
@@ -44,11 +44,14 @@
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border: 2px solid #ffcc80;
-            
+
             /* --- ส่วนที่เพิ่มเข้ามาใหม่ --- */
-            max-width: 1100px; /* กำหนดความกว้างสูงสุดของการ์ดให้เท่ากัน (และตรงกับ footer) */
-            width: 100%;       /* ให้การ์ดขยายเต็มพื้นที่จนถึง max-width */
-            margin: 0 auto 30px auto; /* จัดการ์ดให้อยู่กึ่งกลาง และเว้นระยะด้านล่าง 30px */
+            max-width: 1100px;
+            /* กำหนดความกว้างสูงสุดของการ์ดให้เท่ากัน (และตรงกับ footer) */
+            width: 100%;
+            /* ให้การ์ดขยายเต็มพื้นที่จนถึง max-width */
+            margin: 0 auto 30px auto;
+            /* จัดการ์ดให้อยู่กึ่งกลาง และเว้นระยะด้านล่าง 30px */
             /* ------------------------- */
         }
 
@@ -128,18 +131,45 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+
+            /* ปรับ Container เป็นแนวตั้ง */
             .profile-container {
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
+                /* เอารูปไว้ตรงกลาง */
             }
 
+            .profile-info {
+                width: 100%;
+                /* ให้กว้างเต็มจอ */
+                min-width: auto;
+                /* ⭐ สำคัญ: ยกเลิก min-width เดิมที่ทำให้ล้น */
+                padding-left: 0;
+                /* เอาช่องว่างซ้ายออก */
+                margin-top: 20px;
+                /* เว้นระยะห่างจากรูป */
+                text-align: left;
+                /* จัดข้อความชิดซ้ายเหมือนเดิม */
+            }
+
+            /* ปรับขนาดรูปใน Activity ให้พอดีจอ */
             .activity-item {
                 flex-direction: column;
             }
 
             .activity-imgs {
+                flex-wrap: wrap;
                 justify-content: center;
+            }
+
+            .activity-imgs img {
+                width: 100%;
+                /* รูปขยายเต็มมือถือ */
+                height: auto;
+                /* สูงตามสัดส่วน */
+                max-width: 400px;
+                /* จำกัดไม่ให้ใหญ่เกินไป */
             }
         }
     </style>
@@ -230,4 +260,5 @@
     </footer>
 
 </body>
+
 </html>
