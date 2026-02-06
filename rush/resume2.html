@@ -29,11 +29,9 @@
             background-color: #f6f6f6;
         }
 
-        /* --- Layout --- */
         section {
             padding: 40px 20px;
-            width: 900px;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .card {
@@ -42,8 +40,6 @@
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border: 2px solid #ffcc80;
-
-            /* กำหนดความกว้าง 1100px ให้เท่ากับ Nav/Footer */
             max-width: 1100px;
             width: 100%;
             margin: 0 auto 30px auto;
@@ -63,7 +59,7 @@
             flex-wrap: wrap;
             gap: 30px;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* จัดกึ่งกลางในจอใหญ่ */
         }
 
         .profile-img {
@@ -77,9 +73,8 @@
         .profile-info {
             flex: 1;
             min-width: 280px;
-            
-            text-align: left;
-            padding-left: 20px;
+            text-align: left;   /* จัดชิดซ้ายในจอใหญ่ */
+            padding-left: 20px; /* เว้นระยะจากรูป */
         }
 
         .profile-info p {
@@ -126,21 +121,30 @@
             border: 1px solid #ddd;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             .profile-container {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: column; /* เรียงลงมาเป็นแนวตั้ง */
+                align-items: center;    /* จัดรูปให้อยู่ตรงกลาง */
             }
+
             .profile-info {
-                text-align: center; /* ในมือถืออาจจะให้ center เหมือนเดิม */
-                padding-left: 0;
+                width: 100%;      /* ให้ข้อความขยายเต็มความกว้าง */
+                padding-left: 0;  /* เอา padding ซ้ายออก */
+                margin-top: 20px; /* เว้นระยะห่างจากรูปด้านบน */
+                text-align: left; /* ยังคงชิดซ้ายตามที่ต้องการ */
             }
+
             .activity-item {
                 flex-direction: column;
             }
+
             .activity-imgs {
                 justify-content: center;
+            }
+            
+            .activity-imgs img {
+                width: 100%; /* ให้รูปกิจกรรมยืดเต็มจอในมือถือ */
+                height: auto;
             }
         }
     </style>
@@ -159,7 +163,6 @@
         <div class="card">
             <h2>About me</h2>
             <div class="profile-container">
-                
                 <img src="https://media.discordapp.net/attachments/1241961244584312914/1469323482830606611/A7B3B71A-8357-4EFB-9D66-4FFAEC99DADA.jpg?ex=69873da1&is=6985ec21&hm=bdc7887008e2c40719b306f61a8e9881c0e4ee3142c83b1ce93b3634b476c784&=&format=webp&width=716&height=960" alt="Panas Photo" class="profile-img">
 
                 <div class="profile-info">
@@ -177,7 +180,7 @@
     <section id="activities">
         <div class="card">
             <h2>Activities/Achievements</h2>
-
+            
             <div class="activity-item">
                 <div class="activity-text">
                     <h3>DIP TALK</h3>
@@ -198,29 +201,21 @@
                 </div>
             </div>
 
+
         </div>
     </section>
 
     <footer class="footer" id="contact">
         <h2 class="footer-title">CONTACT US</h2>
-
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Panas Junsri</h3>
                 <a href="https://www.facebook.com/JowGao/" target="_blank">Facebook</a>
                 <a href="https://www.instagram.com/panas_.9/" target="_blank">Instagram</a>
-                <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-feb-2026-68011748-cyber"
-                    target="_blank">Github</a>
+                <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-feb-2026-68011748-cyber" target="_blank">Github</a>
             </div>
-
             <div class="footer-column">
                 <h3>Sorrawit Junsawang</h3>
                 <a href="https://www.facebook.com/notikzx" target="_blank">Facebook</a>
                 <a href="https://www.instagram.com/nottnts/" target="_blank">Instagram</a>
                 <a href="https://github.com/heyitsmenort" target="_blank">Github</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
