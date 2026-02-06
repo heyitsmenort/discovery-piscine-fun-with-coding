@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Panas Junsri</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Home.css">
+
+    <style>
+        /* --- ตั้งค่าเฉพาะหน้า Resume --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Sarabun', 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px;
+            background-color: #f6f6f6;
+        }
+
+        /* --- Layout --- */
+        section {
+            padding: 40px 20px;
+            width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid #ffcc80;
+
+            /* กำหนดความกว้าง 1100px ให้เท่ากับ Nav/Footer */
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto 30px auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #000;
+            font-weight: 800;
+        }
+
+        /* --- Part 1: About Me --- */
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #ddd;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 280px;
+            
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .profile-info p {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Part 2: Activities --- */
+        .activity-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .activity-text h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #d84315;
+        }
+
+        .activity-imgs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .activity-imgs img {
+            width: 240px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 5px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-info {
+                text-align: center; /* ในมือถืออาจจะให้ center เหมือนเดิม */
+                padding-left: 0;
+            }
+            .activity-item {
+                flex-direction: column;
+            }
+            .activity-imgs {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Main.html" class="nav-item">Home</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="card">
+            <h2>About me</h2>
+            <div class="profile-container">
+                
+                <img src="https://media.discordapp.net/attachments/1241961244584312914/1469323482830606611/A7B3B71A-8357-4EFB-9D66-4FFAEC99DADA.jpg?ex=69873da1&is=6985ec21&hm=bdc7887008e2c40719b306f61a8e9881c0e4ee3142c83b1ce93b3634b476c784&=&format=webp&width=716&height=960" alt="Panas Photo" class="profile-img">
+
+                <div class="profile-info">
+                    <p><strong>ชื่อ :</strong> นายปาณัสภ์ จันทร์ศรี (ก้าว)</p>
+                    <p><strong>Name :</strong> Panas Junsri (Gao)</p>
+                    <p><strong>คณะ :</strong> วิศวกรรมศาสตร์</p>
+                    <p><strong>สาขา :</strong> อิเล็กทรอนิกส์</p>
+                    <p><strong>รหัสนักศึกษา :</strong> 68011748</p>
+                    <p><strong>งานอดิเรก :</strong> ฟังเพลง, เล่นเกม, อ่านหนังสือ, ออกกำลังกาย</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <div class="card">
+            <h2>Activities/Achievements</h2>
+
+            <div class="activity-item">
+                <div class="activity-text">
+                    <h3>DIP TALK</h3>
+                    <p>ได้มีส่วนร่วมในการจัดงาน DIP Talk Inspired by the professional เวทีสร้างแรงบันดาลใจ จากผู้ประสบความสำเร็จในหลากหลายอาชีพ ภายใต้ธีม "Unlock The Infinite Passion"</p>
+                </div>
+                <div class="activity-imgs">
+                    <img src="https://media.discordapp.net/attachments/1241961244584312914/1469323538857984070/32BD2665-D168-41C1-BBFD-68B0ABAD481D.jpg?ex=69873dae&is=6985ec2e&hm=c60958bbb5aec10d77e8851ed26a1f05965f450cb8d460a1b2fc5be4488ae746&=&format=webp" alt="Activity Image">
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-text">
+                    <h3>DIP Internship 2023</h3>
+                    <p>ในปี 2566 เดือนมีนาคม ได้เลือกเข้าฝึกงานที่การไฟฟ้าส่วนภูมิภาคสำนักงานใหญ่ รวมเวลาทั้งหมด 15 วัน ที่กองวางเเผนเเละบริหารงานพัฒนาผลิตภัณฑ์ดิจิทัล</p>
+                </div>
+                <div class="activity-imgs">
+                    <img src="https://media.discordapp.net/attachments/1241961244584312914/1469323608328507546/6F5C57BA-A5D6-466A-B13E-12FE34A8FF7E.jpg?ex=69873dbe&is=6985ec3e&hm=e9731e01ca84796fb0bd76df58832a007d88b61080970279bd1209f52b52aab3&=&format=webp" alt="Activity Image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <h2 class="footer-title">CONTACT US</h2>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Panas Junsri</h3>
+                <a href="https://www.facebook.com/JowGao/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/panas_.9/" target="_blank">Instagram</a>
+                <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-feb-2026-68011748-cyber"
+                    target="_blank">Github</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Sorrawit Junsawang</h3>
+                <a href="https://www.facebook.com/notikzx" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/nottnts/" target="_blank">Instagram</a>
+                <a href="https://github.com/heyitsmenort" target="_blank">Github</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
